@@ -69,18 +69,21 @@ Follow these steps to set up the project locally:
 
 2. **Set up Virtual Environment**:
     ```bash
-    python -m venv venv  
-source venv/bin/activate  
+    python -m venv venv
+    source venv/bin/activate  
 
 
 3. **Install Dependencies:**:
-pip install -r requirements.txt  
+    ```bash
+    pip install -r requirements.txt  
 
-4. **Run Migrations:**:
- python manage.py migrate  
+5. **Run Migrations:**:
+ ```bash
+python manage.py migrate  
 
-5. **Start the Server:**:
- python manage.py runserver
+7. **Start the Server:**:
+ ```bash
+python manage.py runserver
 
 ## 🖼️ Usage
 1. Log in or register to access the system.
