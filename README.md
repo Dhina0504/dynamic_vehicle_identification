@@ -58,3 +58,31 @@ vehiclerecognition/
 ├── manage.py                     # Django project management script  
 └── README.md                     # Project documentation  
 
+## ⚙️ Installation  
+
+Follow these steps to set up the project locally:  
+
+1. **Clone the Repository**:  
+   ```bash  
+   git clone https://github.com/your-username/dynamic-vehicle-identification.git  
+   cd dynamic-vehicle-identification  
+
+2. **Set up Virtual Environment**:
+    ```bash
+    python -m venv venv  
+source venv/bin/activate  
+
+
+3. **Install Dependencies:**:
+pip install -r requirements.txt  
+
+4. **Run Migrations:**:
+ python manage.py migrate  
+
+5. **Start the Server:**:
+ python manage.py runserver
+
+## 🖼️ Usage
+1. Log in or register to access the system.
+2. Upload an image of a vehicle's number plate.
+3. View the state associated with the number plate.
