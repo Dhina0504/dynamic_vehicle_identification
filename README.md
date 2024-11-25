@@ -78,13 +78,12 @@ Follow these steps to set up the project locally:
     pip install -r requirements.txt  
 
 5. **Run Migrations:**:
- ```bash
-python manage.py migrate  
+   ```bash
+   python manage.py migrate  
 
-7. **Start the Server:**:
- ```bash
-python manage.py runserver
-
+6.  **Start the Server:**:
+    ```bash
+    python manage.py runserver
 ## 🖼️ Usage
 1. Log in or register to access the system.
 2. Upload an image of a vehicle's number plate.
