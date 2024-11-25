@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}Services | Dynamic Vehicle Identification & Tracker{% endblock %}
+
+{% block content %}
+<div class="services-section text-center mt-5">
+    <h1 class="display-4" style="color: #00ff99;">Our Services</h1>
+    <p class="lead text-white">Explore the range of services we offer to keep your vehicles safe and monitored.</p>
+
+    <div class="container mt-5">
+        <div class="row g-4">
+            <!-- Service Card 1 -->
+            <div class="col-md-4">
+                <div class="card service-card bg-dark text-white rounded-4 shadow border-0 h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-map-marker-alt fa-3x" style="color: #00ff99;"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #00ff99;">Real-Time Tracking</h4>
+                        <p class="card-text">Monitor the location of your vehicles in real-time with our advanced tracking technology.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="col-md-4">
+                <div class="card service-card bg-dark text-white rounded-4 shadow border-0 h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-car-crash fa-3x" style="color: #00ff99;"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #00ff99;">Incident Detection</h4>
+                        <p class="card-text">Get instant alerts for incidents or potential hazards affecting your vehicles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="col-md-4">
+                <div class="card service-card bg-dark text-white rounded-4 shadow border-0 h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-shield-alt fa-3x" style="color: #00ff99;"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #00ff99;">Safety Management</h4>
+                        <p class="card-text">Ensure the safety of your fleet with our comprehensive safety management solutions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Card 4 -->
+            <div class="col-md-4">
+                <div class="card service-card bg-dark text-white rounded-4 shadow border-0 h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-chart-line fa-3x" style="color: #00ff99;"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #00ff99;">Performance Analytics</h4>
+                        <p class="card-text">Analyze vehicle performance with detailed analytics for better decision-making.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 5 -->
+            <div class="col-md-4">
+                <div class="card service-card bg-dark text-white rounded-4 shadow border-0 h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-bell fa-3x" style="color: #00ff99;"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #00ff99;">Alerts & Notifications</h4>
+                        <p class="card-text">Stay informed with real-time alerts and notifications tailored to your needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Card 6 -->
+            <div class="col-md-4">
+                <div class="card service-card bg-dark text-white rounded-4 shadow border-0 h-100">
+                    <div class="card-body text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-tools fa-3x" style="color: #00ff99;"></i>
+                        </div>
+                        <h4 class="card-title" style="color: #00ff99;">Maintenance Scheduling</h4>
+                        <p class="card-text">Schedule regular maintenance to extend the life and performance of your vehicles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .service-card:hover {
+        background-color: #111;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .service-icon {
+        color: #00ff99;
+        transition: color 0.3s ease-in-out;
+    }
+</style>
+{% endblock %}

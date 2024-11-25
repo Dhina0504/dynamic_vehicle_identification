@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+<div class="messages">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<!-- Upload Form Container -->
+<div class="login-container">
+    <h1>Upload Image for Vehicle Number Plate Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <label class="file-label" for="file-upload">Select an image:</label>
+        <input id="file-upload" type="file" name="image" class="file-input">
+      
+        <button type="submit" class="btn">Upload</button>
+    </form>
+</div>
+
+
+<!-- Custom CSS Styling -->
+<style>
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+      
+        background-size: cover;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    /* Navbar styling */
+    .navbar {
+        width: 100%;
+        background-color: rgba(248, 98, 5, 0.85);
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 1000;
+    }
+    .navbar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 20px;
+    }
+    .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    .navbar ul li a:hover {
+        color: #00ff99;
+    }
+
+    /* Messages styling */
+    .messages {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .message {
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+    .message.success {
+        background-color: rgba(40, 167, 69, 0.8);
+        color: #fff;
+    }
+    .message.error {
+        background-color: rgba(220, 53, 69, 0.8);
+        color: #fff;
+    }
+
+    /* Upload Container styling */
+    .login-container {
+        background: rgba(0, 0, 0, 0.85);
+        padding: 50px;
+        border-radius: 15px;
+        width: 500px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        margin: 50px auto;
+        transition: transform 0.3s ease;
+    }
+    .login-container:hover {
+        transform: scale(1.02);
+    }
+
+    footer{
+      margin-top: 10px;
+    }
+    
+     /* Header styling */
+     .login-container h1 {
+        font-size: 2em;
+        color: #00ff99;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+    }
+   
+  /* Label for file input */
+  .file-label {
+        display: block;
+        font-size: 1.2em;
+        color: #ccc;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+      /* Custom File Input styling */
+      .file-input {
+        width: 100%;
+        padding: 12px;
+        margin: 12px 0;
+        border: 2px dashed #444;
+        border-radius: 10px;
+        font-size: 1em;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .file-input:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Custom style for file button */
+    .file-input::file-selector-button {
+        padding: 12px 25px;
+        background: linear-gradient(135deg, #ff5e62, #ff9966);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-right: 10px;
+        transition: background 0.3s, transform 0.2s;
+    }
+    .file-input::file-selector-button:hover {
+        background: linear-gradient(135deg, #ff9966, #ff5e62);
+        transform: scale(1.05);
+    }
+    /* Button styling */
+    .btn {
+        width: 100%;
+        padding: 15px;
+        margin-top: 25px;
+        background: linear-gradient(135deg, #ff5e62, #ff9966);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.2em;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+        background: linear-gradient(135deg, #ff9966, #ff5e62);
+        transform: scale(1.05);
+    }
+
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+        .login-container {
+            width: 90%;
+            padding: 40px;
+        }
+
+        .login-container h1 {
+            font-size: 1.8em;
+        }
+
+        .btn {
+            font-size: 1em;
+        }
+    }
+
+
+
+</style>
+
+<style>
+    /* General Body Styling */
+    body {
+      
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+  
+    /* Navbar Styling */
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #444;
+    }
+    .navbar .nav-link {
+      color: #ffffff;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #00ff99;
+    }
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+  
+    /* Footer Styling */
+    footer {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      padding: 60px 20px;
+      font-size: 16px;
+    }
+    footer h3 {
+      color: #00ff99;
+    }
+    footer a {
+      color: #00ff99;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    footer .footer-section {
+      flex: 1;
+      min-width: 250px;
+      padding: 15px;
+    }
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+  </style>
+
+{% endblock %}
+
