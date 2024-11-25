@@ -15,7 +15,13 @@ This project is a Dynamic Vehicle Identification and Tracking System designed to
 
 
 
-## Features
+## 🚀 Features
 1.Number Plate Recognition: Automatically detects and extracts details from the uploaded number plate image.
 2.State Identification: Displays the state corresponding to the number plate.
 3.User-Friendly Interface: Simplified upload functionality for easy interaction.
+##🛠️ Technologies Used
+Frontend: HTML, CSS, JavaScript
+Backend: Python, Django
+Machine Learning/AI: Optical Character Recognition (OCR) for number plate detection
+Database: SQLite (or any database of your choice)
+
