@@ -89,3 +89,14 @@ Follow these steps to set up the project locally:
 1. Log in or register to access the system.
 2. Upload an image and vedio of a vehicle's number plate.
 3. View the state associated with the number plate.
+
+## 💡 Key Functionality
+1. Pytesseract OCR: Extracts number plate text from images and videos.
+2. State Identification: Maps number plates to their respective states.
+3. Image and Video Support: Handles both static and dynamic inputs.
+4. Responsive Design: Ensures usability across devices using Bootstrap.
+
+## 🧪 Testing
+
+1. Test the application with sample images and videos of vehicle number plates.
+2. Supported formats: .jpg, .png, .jpeg (for images) and .mp4, .avi (for videos).
