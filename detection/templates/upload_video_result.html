@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="messages">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<div class="result-container">
+    <h1>Detected Number Plates</h1>
+    {% if vehicle_data %}
+        <table class="detected-plates-table">
+            <thead>
+                <tr>
+                    <th>Vehicle Number</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for number, state in vehicle_data %}
+                <tr>
+                    <td>{{ number }}</td>
+                    <td>{{ state }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="no-data-message">No number plates detected in the video.</p>
+    {% endif %}
+    <a href="{% url 'upload_video' %}" class="btn">Upload another video</a>
+</div>
+
+<!-- Custom Styling -->
+<style>
+    /* General Body Styling */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+
+    /* Result container styling */
+    .result-container {
+        background-color: #ffffff;
+        width: 500px;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin: 40px auto;
+        transition: transform 0.3s ease;
+    }
+
+    .result-container:hover {
+        transform: scale(1.02);
+    }
+
+    /* Header styling */
+    h1 {
+        font-size: 2em;
+        color: #ff5e62;
+        margin-bottom: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    /* Table styling */
+    .detected-plates-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 1em;
+    }
+
+    .detected-plates-table th, .detected-plates-table td {
+        padding: 15px;
+        border: 1px solid #ff5e62; /* matching the header color */
+        text-align: center;
+    }
+
+    .detected-plates-table th {
+        background-color: #ff5e62; /* Light background for the header */
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .detected-plates-table tr:nth-child(even) {
+        background-color: #ffe0e0; /* Light red background for even rows */
+    }
+
+    .detected-plates-table tr:nth-child(odd) {
+        background-color: #f9f9f9; /* Light gray for odd rows */
+    }
+
+    .detected-plates-table tr:hover {
+        background-color: #ffcccc; /* Highlight row on hover */
+    }
+
+    /* Messages styling */
+    .messages {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .message {
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .message.success {
+        background-color: rgba(40, 167, 69, 0.8);
+        color: white;
+    }
+
+    .message.error {
+        background-color: rgba(220, 53, 69, 0.8);
+        color: white;
+    }
+
+    /* No data message */
+    .no-data-message {
+        color: #888;
+        font-size: 1.1em;
+        margin-top: 20px;
+    }
+
+    /* Button styling */
+    .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #ff5e62;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 1.1em;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        background-color: #ff9966;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .result-container {
+            width: 90%;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 1.6em;
+        }
+
+        .btn {
+            font-size: 1em;
+        }
+
+        .detected-plates-table th, .detected-plates-table td {
+            padding: 10px;
+        }
+    }
+</style>
+
+{% endblock %}
