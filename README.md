@@ -111,5 +111,5 @@ Follow these steps to set up the project locally:
 3. Bootstrap: Frontend framework for responsive styling.
 ## 👩‍💻 Author
 Dhinakaran R
-  Email: dhinadhina417@gmail.com
-  GitHub: 
+ . Email: dhinadhina417@gmail.com
+. GitHub: https://github.com/Dhina0504
