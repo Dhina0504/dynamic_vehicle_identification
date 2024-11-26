@@ -100,3 +100,16 @@ Follow these steps to set up the project locally:
 
 1. Test the application with sample images and videos of vehicle number plates.
 2. Supported formats: .jpg, .png, .jpeg (for images) and .mp4, .avi (for videos).
+
+## 📝 Notes
+
+1. Pytesseract must be correctly installed and configured for the OCR functionality to work.
+2. The application uses SQLite (db.sqlite3) as the default database.
+## 🤝 Acknowledgements
+1. Pytesseract: OCR tool used for number plate recognition.
+2. Django Framework: Backend framework powering the application.
+3. Bootstrap: Frontend framework for responsive styling.
+## 👩‍💻 Author
+Dhinakaran R
+  Email: dhinadhina417@gmail.com
+  GitHub: 
