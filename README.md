@@ -8,8 +8,11 @@ This project is a **Dynamic Vehicle Identification and Tracking System** designe
 
 - **Home Page:**: Welcoming page with navigation options for easy access.
 - **User Authentication:**: Secure registration and login functionality.
-- **Image And Vedio Upload**:Detects vehicle number plates and states from static images and dynamic vedios.
-- **Results Pages:**: Displays extracted vehicle numbers and identified states.  
+- **Image Upload**:Detects vehicle number plates and states from static images and .
+- **Video Upload**: Perform dynamic number plate recognition from video files.
+- **Results Pages:**: Displays extracted vehicle numbers and identified states.
+-  **Contact Pages:**: Submit queries or feedback via a contact form.
+-  **Responsive Design:**:  Styled with Bootstrap for compatibility across all devices.
 
 ---
 
@@ -17,8 +20,8 @@ This project is a **Dynamic Vehicle Identification and Tracking System** designe
 
 - **Frontend**: HTML, CSS, JavaScript, Bootstrap  
 - **Backend**: Python, Django  
-- **Machine Learning/AI**: Optical Character Recognition (OCR) for number plate detection  
-- **Database**: SQLite (or any database of your choice)  
+- **Machine Learning/AI**: Optical Character Recognition ( Pytesseract) for number plate detection  
+- **Database**: SQLite (or any database of your choic)  
 
 ---
 
