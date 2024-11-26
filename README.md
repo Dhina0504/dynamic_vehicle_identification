@@ -6,15 +6,16 @@ This project is a **Dynamic Vehicle Identification and Tracking System** designe
 
 ## 🚀 Features  
 
-- **Number Plate Recognition**: Automatically detects and extracts details from the uploaded number plate image.  
-- **State Identification**: Displays the state corresponding to the number plate.  
-- **User-Friendly Interface**: Simplified upload functionality for easy interaction.  
+- **Home Page:**: Welcoming page with navigation options for easy access.
+- **User Authentication:**: Secure registration and login functionality.
+- **Image And Vedio Upload**:Detects vehicle number plates and states from static images and dynamic vedios.
+- **Results Pages:**: Displays extracted vehicle numbers and identified states.  
 
 ---
 
 ## 🛠️ Technologies Used  
 
-- **Frontend**: HTML, CSS, JavaScript  
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap  
 - **Backend**: Python, Django  
 - **Machine Learning/AI**: Optical Character Recognition (OCR) for number plate detection  
 - **Database**: SQLite (or any database of your choice)  
@@ -86,5 +87,5 @@ Follow these steps to set up the project locally:
     python manage.py runserver
 ## 🖼️ Usage
 1. Log in or register to access the system.
-2. Upload an image of a vehicle's number plate.
+2. Upload an image and vedio of a vehicle's number plate.
 3. View the state associated with the number plate.
